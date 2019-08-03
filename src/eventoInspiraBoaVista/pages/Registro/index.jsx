@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import { Redirect } from 'react-router-dom';
-import Divider from '@material-ui/core/Divider';
+import MaskedInput from 'react-text-mask';
 
 
 import { makeStyles } from '@material-ui/core/styles';
@@ -113,6 +113,7 @@ export default function FormPersonRegister() {
     paisNascimento: '',
     estadoNascimento: '',
     cidadeNascimento: '',
+    maisInformacoes: '',
   });
 
   const handleChange = name => event => {
@@ -136,8 +137,16 @@ export default function FormPersonRegister() {
         celular: values.celular,
         pais: values.pais,
         cidade: values.cidade,
-        estado: values.estado
-      }
+        estado: values.estado,
+        nascimento: {
+          data: values.dataNascimento,  
+          nacionalidade: values.nacionalidade,
+          pais: values.paisNascimento,
+          estado: values.estadoNascimento,
+          cidade: values.cidadeNascimento
+        }
+      },
+      maisInformacoes: values.maisInformacoes  
     };
 
     if(obj.dados.nome === ''){
@@ -421,11 +430,14 @@ export default function FormPersonRegister() {
       </Grid>
       <Grid item xs={12} sm={6} md={4} lg={4}>
           <FormControl className={classes.formControl}>
+          <Typography variant="body1" component="h2" gutterBottom>
+            Data de Nascimento Nascimento
+          </Typography>
             <TextField
-              label="Data Nascimento"
               value={values.dataNascimento}
               onChange={handleChange('dataNascimento')}
               className={classes.textField}
+              type="date"
             />
           </FormControl>
         </Grid>
@@ -476,6 +488,29 @@ export default function FormPersonRegister() {
         </Grid>
       </Paper>
       
+
+      
+      <Paper className={classes.paper3}>
+      <Grid container spacing={3}>
+      <Grid item xs={12} sm={12} md={12} lg={12}>
+        <Typography variant="h4" component="h2" gutterBottom>
+          Mais Informações
+        </Typography>
+      </Grid>
+        <Grid item xs={12} sm={12} md={12} lg={12}>
+          <FormControl className={classes.formControl}>
+            <TextField
+              label="Mais Informações"
+              value={values.maisInformacoes}
+              onChange={handleChange('maisInformacoes')}
+              className={classes.textField}
+              multiline
+              rowsMax="10"
+            />
+          </FormControl>
+        </Grid>
+        </Grid>
+      </Paper>
 
       <Grid container spacing={3}>
         <Grid item xs={12} sm={12} className={classes.rowButtonSubmit}>

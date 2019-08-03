@@ -31,15 +31,6 @@ const useStyles = makeStyles(theme =>
           margin: '0px auto',
         }
     },
-    appBar : {
-        backgroundColor: "#C01C10",
-    },
-    menuButton: {
-        marginRight: theme.spacing(2),
-    },
-      title: {
-        flexGrow: 1,
-    },
     content: {
         background: "#F5E9DA",
         width: "100%",
@@ -50,7 +41,17 @@ const useStyles = makeStyles(theme =>
         '& h2' : {
             opacity: "0.8",
         }
-    }
+    },
+    buttonAdd:{
+      border: '2px solid #990405',
+      color: '#fff',
+      padding: '20px',
+      fontSize: '16pt',
+      marginTop: '50px',
+      '&:hover':{
+          color: '#fff', 
+      }
+  }
 
 }));
 
@@ -64,6 +65,11 @@ export default function Home() {
                 A <span>Social Me</span> agradece seu registro!
             </Typography>
             <Favorite className='coracao' />
+            <Link to={`/registro`}>
+                <Button size="large" variant="contained" className={classes.buttonAdd}>
+                    Novo Registro
+                </Button>
+            </Link> 
         </div>
     </div>
   );
