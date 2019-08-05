@@ -104,6 +104,7 @@ export default function FormPersonRegister() {
     profissao: '',
     telefoneFixo: '',
     celular: '',
+    email: '',
     pais: 'Brasil',
     cidade: 'Boa Vista',
     estado: 'Roraima',
@@ -135,6 +136,7 @@ export default function FormPersonRegister() {
         profissao: values.profissao,
         telefoneFixo: values.telefoneFixo,
         celular: values.celular,
+        email: values.email,
         pais: values.pais,
         cidade: values.cidade,
         estado: values.estado,
@@ -385,8 +387,18 @@ export default function FormPersonRegister() {
             />
           </FormControl>
         </Grid>
+        <Grid item xs={12} sm={3}>
+          <FormControl className={classes.formControl}>
+            <TextField
+              label="Email"
+              value={values.email}
+              onChange={handleChange('email')}
+              className={classes.textField}
+            />
+          </FormControl>
+        </Grid>
         {/* LINHA 5 (PAÍS - ESTADO - CIDADE) */}
-        <Grid item xs={12} sm={4}>
+        <Grid item xs={12} sm={3}>
           <FormControl className={classes.formControl}>
             <TextField
               label="País"
@@ -396,7 +408,7 @@ export default function FormPersonRegister() {
             />
           </FormControl>
         </Grid>
-        <Grid item xs={12} sm={4}>
+        <Grid item xs={12} sm={3}>
           <FormControl className={classes.formControl}>
             <TextField
               label="Estado"
@@ -406,7 +418,7 @@ export default function FormPersonRegister() {
             />
           </FormControl>
         </Grid>
-        <Grid item xs={12} sm={4}>
+        <Grid item xs={12} sm={3}>
           <FormControl className={classes.formControl}>
             <TextField
               label="Cidade"
