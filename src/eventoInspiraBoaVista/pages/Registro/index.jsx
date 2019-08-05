@@ -166,7 +166,7 @@ export default function FormPersonRegister() {
         alertMessage: 'Seu CPF é obrigatório'
       });
     }else{
-        axios.post('https://evening-stream-13777.herokuapp.com/api/person', obj)
+        axios.post('https://socialme-api.herokuapp.com/api/person', obj)
         .then(
           setValues({ 
             nome: '',
