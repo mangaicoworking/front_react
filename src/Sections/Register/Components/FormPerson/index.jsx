@@ -36,14 +36,14 @@ const useStyles = makeStyles(theme => ({
   },
   rowButtonSubmit: {
     '& button' : {
-      backgroundColor: "#880000",
+      backgroundColor: "var(--primary)",
       color: "#fff",
       marginTop: "50px",
       float: "right",
       display: "block",
     },
     '& button:hover' : {
-      backgroundColor: "#FA533B",
+      backgroundColor: "var(--redDark)",
     }
   },
   rowButtonLink :{
@@ -377,7 +377,7 @@ export default function FormPersonRegister() {
           </Button>
         </Grid>
         <Grid item xs={12} sm={12} className={classes.rowButtonLink}>
-          <Link to={`/login`} >
+          <Link to={`/entrar`} >
             Já tem uma conta?
           </Link>
         </Grid>

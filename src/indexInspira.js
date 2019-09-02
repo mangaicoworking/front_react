@@ -6,23 +6,17 @@ import * as serviceWorker from './serviceWorker';
 import './index.css';
 
 // Pages
-import Home from './pages/Home/index';
-import Login from './pages/Login/index';
-import Register from './pages/Register/index';
-import DashboardBeneficiary from './pages/DashboardBeneficiary/index';
-import DashboardProvider from './pages/DashboardProvider/index';
-import DashboardDonor from './pages/DashboardDonor/index';
+import Home from './eventoInspiraBoaVista/pages/Home/index';
+import Registro from './eventoInspiraBoaVista/pages/Registro/index';
+import Obrigado from './eventoInspiraBoaVista/pages/Obrigado/index';
 
 class App extends Component {
   render() {
     return (
       <BrowserRouter>
           <Route exact path="/" component={Home} />
-          <Route path="/login" component={Login} />
-          <Route path="/register" component={Register} />
-          <Route path="/dashboard_beneficiary" component={DashboardBeneficiary} />
-          <Route path="/dashboard_provider" component={DashboardProvider} />
-          <Route path="/dashboard_donor" component={DashboardDonor} />
+          <Route exact path="/registro" component={Registro} />
+          <Route exact path="/obrigado" component={Obrigado} />
       </BrowserRouter>
     );
   }
