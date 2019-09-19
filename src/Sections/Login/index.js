@@ -1,12 +1,13 @@
 import React from 'react';
-import Navbar from './../../Components/Layouts/Navbar';
-import FormLogin from './Components/FormLogin';
+import Navbar from './../../Components/Layout/Navbar';
 
-export default function Login(props) {
+export default function Login() {
   return (
     <>
-      <Navbar path={props.match.path} />
-      <FormLogin />
+      <Navbar />
+      <div className="content-generic">
+        <h1>Login</h1>
+      </div>
     </>
   );
 }

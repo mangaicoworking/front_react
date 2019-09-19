@@ -1,10 +1,10 @@
 import React from 'react';
-import Navbar from './../../../Components/Layouts/Navbar';
+import Navbar from './../../../Components/Layout/Navbar';
 
-export default function HowWorks(props) {
+export default function HowWorks() {
   return (
     <>
-      <Navbar path={props.match.path} />
+      <Navbar />
       <div className="content-generic">
         <h1>Como Funciona</h1>
       </div>

@@ -1,10 +1,10 @@
 import React from 'react';
-import Navbar from './../../../Components/Layouts/Navbar';
+import Navbar from './../../../Components/Layout/Navbar';
 
-export default function WhereAreWe(props) {
+export default function WhereAreWe() {
   return (
     <>
-      <Navbar path={props.match.path} />
+      <Navbar />
       <div className="content-generic">
         <h1>Onde Estamos</h1>
       </div>
