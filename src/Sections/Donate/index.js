@@ -1,5 +1,5 @@
 import React from 'react';
-import Navbar from './../../Components/Layout/Navbar';
+import Navbar from './../../Components/Layouts/Navbar';
 
 export default function Donate() {
   return (
